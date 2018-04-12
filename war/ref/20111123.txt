@@ -1,0 +1,49 @@
+找保護點
+
+debugger : 設斷點單步追蹤
+read code, 反組譯成 smail or java
+搜尋特徵
+匹配法找類似保護點
+
+
+
+
+
+破解版特徵
+簽名檔一定和你不同
+	apk size
+	與正版大個幾Ｋ：中木馬
+
+	
+	
+防治:
+	別讓人家 debug 你的程式
+	getApplicationInfo().flags&=ApplicationInfo.FLAG_DEBGGABLE
+	
+	看不懂你的程式
+	obfuscation-proguard
+	
+	偵測到破解不要馬上動作
+	
+	保護點要分散, 千萬不要模組化!!!
+	
+	每個版本都要變保護點寫法
+	
+	保護點要很多, 給一些糖吃, 做一些假的保護點
+	
+	
+Ad Blocker
+	/etc/host	看內容有沒有 admob.com or ....
+				將各個AD的host改成127.0.0.1
+				但是要先 root
+				有裝 custom rom 的都有內建擋廣告功能
+				裝 Ad block 反而對營收排行榜上升
+				Ad block 是免費版的破解版
+				
+--
+
+	用proguard
+	不要保護點模組化,並分散, 每個版本變更保護點寫法
+	廣告支援程式加 anti-ad blocker
+	
+

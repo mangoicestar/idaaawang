@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../../lib2/d3_2_5.js"></script>
+</head>
+<body>
+	<div class="chart" id="chart"></div>
+	<script>
+		var data=[2,10,3,5];
+		
+		var chart=d3.select("#chart");
+		
+		chart.style("width",300)
+		.style("text-align","right")
+		.style("border","3px")
+		.style("border-style","solid")
+		.style("border-color","pink");
+	
+		chart.selectAll("div")
+		.data(data)
+		.enter()
+		.append("div")
+		
+		.text(function(item){
+			return item;
+		})
+		
+		.style("width",function(item){
+			return item*30 + "px";
+		})
+		
+		.style("background-color", "steelblue")
+		.style("color", "white")
+		.style("margin","1.5px");
+		
+		
+	</script>
+	
+</body>
+</html>

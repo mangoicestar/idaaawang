@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../../lib2/d3_02.js">
+	
+</script>
+</head>
+<body>
+	<div id="ida"></div>
+	<script>
+	   var sampleSVG = d3.select("#ida")
+       .append("svg:svg")
+       .style("background-color","yellow")
+       .attr("width", 100)		// 畫布的尺寸 (寬)
+       .attr("height", 100);		// 畫布的尺寸 (高)
+       
+	   sampleSVG.append("svg:circle")
+       .style("stroke", "pink")			// 框框
+       .style("stroke-width", 5)
+       .style("fill", "white")				// 預設填滿色彩
+       .attr("r", 25)							// 半徑長度
+       .attr("cx", 50)						// 物件在畫布中 X軸起點位置
+       .attr("cy", 50)						// 物件在畫布中 Y軸起點位置
+	   .on("mouseover", function(){
+		   d3.select(this).style("fill", "pink");})
+	   .on("mouseout", function(){
+		   d3.select(this).style("fill", "white");});
+	</script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+
+{"name":"daily check",
+"children":[
+
+
+	{"name":"一月",
+		"children":[
+			{"name":"cluster",
+				"children":[
+					{"name":"AgglomerativeCluster","size":2538},
+					{"name":"CommunityStructure","size":3712},
+					{"name":"HierarchicalCluster","size":2714},
+					{"name":"MergeEdge","size":743}
+				]
+			}
+		]
+	},
+	
+	
+	{"name":"二月",
+		"children":[
+			{"name":"Tween","size":10006}
+		]
+	},
+	
+	
+	{"name":"三月",
+		"children":[
+			{"name":"converters",
+				"children":[
+					{"name":"Converters","size":721},
+					{"name":"DelimitedTextConverter","size":294},
+					{"name":"GraphMLConverter","size":2800},
+					{"name":"IDataConverter","size":1314},
+					{"name":"JSONConverter","size":2220}
+				]
+			},
+			{"name":"DataUtil","size":3322}
+		]
+	},
+	
+	
+	{"name":"四月",
+		"children":[
+			{"name":"DirtySprite","size":6833},
+			{"name":"LineSprite","size":2532},
+			{"name":"RectSprite","size":2623},
+			{"name":"TextSprite","size":2166}
+		]
+	},
+	{"name":"十一月",
+		"children":[
+			{"name":"FlareVis","size":4116}
+		]
+	},
+	
+	
+	{"name":"十月",
+		"children":[
+			{"name":"DragForce","size":1082},
+			{"name":"GravityForce","size":1336},
+			{"name":"IForce","size":319},
+			{"name":"Particle","size":222},
+			{"name":"Spring","size":2213},
+			{"name":"SpringForce","size":1681}
+		]
+	},
+	
+	
+	{"name":"九月",
+		"children":[
+			{"name":"AggregateExpression","size":11},
+			{"name":"And","size":11},
+			{"name":"Arithmetic","size":1},
+			{"name":"Average","size":891},
+			{"name":"BinaryExpression","size":2},
+			{"name":"Comparison","size":11},
+			{"name":"CompositeExpression","size":11},
+			{"name":"Count","size":781},
+			{"name":"DateUtil","size":22},
+			{"name":"Distinct","size":933},
+			{"name":"Expression","size":1},
+			{"name":"ExpressionIterator","size":2},
+			{"name":"Fn","size":3},
+			{"name":"If","size":4},
+			{"name":"IsA","size":1},
+			{"name":"Literal","size":1},
+			{"name":"Match","size":1},
+			{"name":"Maximum","size":843},
+			{"name":"methods",
+				"children":[
+					{"name":"add","size":1},
+					{"name":"and","size":1},
+					{"name":"average","size":1},
+					{"name":"count","size":1},
+					{"name":"distinct","size":1},
+					{"name":"div","size":1},
+					{"name":"eq","size":1},
+					{"name":"fn","size":1},
+					{"name":"gt","size":1},
+					{"name":"gte","size":1},
+					{"name":"iff","size":1},
+					{"name":"isa","size":11},
+					{"name":"lt","size":11},
+					{"name":"lte","size":11},
+					{"name":"max","size":11},
+					{"name":"min","size":11},
+					{"name":"mod","size":11},
+					{"name":"mul","size":1}
+				]
+			},
+			{"name":"Minimum","size":843},
+			{"name":"Not","size":50},
+			{"name":"Or","size":970},
+			{"name":"Query","size":50},
+			{"name":"Range","size":11},
+			{"name":"StringUtil","size":11},
+			{"name":"Sum","size":791},
+			{"name":"Variable","size":1124},
+			{"name":"Variance","size":11},
+			{"name":"Xor","size":1101}
+		]
+	},
+
+	
+	
+	{"name":"八月",
+		"children":[
+			{"name":"IScaleMap","size":11},
+			{"name":"LinearScale","size":1316},
+			{"name":"LogScale","size":11},
+			{"name":"OrdinalScale","size":11},
+			{"name":"QuantileScale","size":11},
+			{"name":"QuantitativeScale","size":11},
+			{"name":"RootScale","size":11},
+			{"name":"Scale","size":11},
+			{"name":"ScaleType","size":1821},
+			{"name":"TimeScale","size":11}
+		]
+	},
+
+	
+	
+	{"name":"七月",
+		"children":[
+			{"name":"IScaleMap","size":2981},
+			{"name":"LinearScale","size":1011},
+			{"name":"LogScale","size":11},
+			{"name":"OrdinalScale","size":1101},
+			{"name":"QuantileScale","size":11},
+			{"name":"QuantitativeScale","size":11},
+			{"name":"RootScale","size":1756},
+			{"name":"Scale","size":1001},
+			{"name":"ScaleType","size":3821},
+			{"name":"TimeScale","size":1001}
+		]
+	},
+
+
+
+	{"name":"六月",
+		"children":[
+			{"name":"IScaleMap","size":11},
+			{"name":"LinearScale","size":11},
+			{"name":"LogScale","size":11},
+			{"name":"OrdinalScale","size":11},
+			{"name":"QuantileScale","size":11},
+			{"name":"QuantitativeScale","size":11},
+			{"name":"RootScale","size":1756},
+			{"name":"Scale","size":11},
+			{"name":"ScaleType","size":1821},
+			{"name":"TimeScale","size":11}
+		]
+	},
+	
+	
+	{"name":"十二月",
+		"children":[
+			{"name":"Arrays","size":11},
+			{"name":"Colors","size":11},
+			{"name":"Dates","size":11},
+			{"name":"Displays","size":11},
+			{"name":"Filter","size":11},
+			{"name":"Geometry","size":993},
+			{
+				"name":"heap",
+				"children":[
+					{"name":"FibonacciHeap","size":11},
+					{"name":"HeapNode","size":1233}
+				]
+			},
+			{"name":"IEvaluable","size":335},
+			{"name":"IPredicate","size":383},
+			{"name":"IValueProxy","size":874},
+			{
+				"name":"math",
+				"children":[
+					{"name":"DenseMatrix","size":11},
+					{"name":"IMatrix","size":11},
+					{"name":"SparseMatrix","size":11}
+				]
+			},
+			{
+				"name":"palette",
+				"children":[
+					{"name":"ColorPalette","size":11},
+					{"name":"Palette","size":1229},
+					{"name":"ShapePalette","size":11},
+					{"name":"SizePalette","size":2291}
+				]
+			},
+			{"name":"Property","size":11},
+			{"name":"Strings","size":1026}
+		]
+	},
+
+
+	
+	
+	{"name":"五月",
+		"children":[
+			{"name":"食",
+				"children":[
+					{"name":"Axes","size":1302},
+					{"name":"Axis","size":11},
+					{"name":"AxisGridLine","size":652},
+					{"name":"AxisLabel","size":636},
+					{"name":"CartesianAxes","size":11}
+				]
+			},
+			{"name":"衣",
+				"children":[
+					{"name":"AnchorControl","size":11},
+					{"name":"ClickControl","size":11},
+					{"name":"Control","size":11},
+					{"name":"ControlList","size":500},
+					{"name":"DragControl","size":11},
+					{"name":"ExpandControl","size":11},
+					{"name":"HoverControl","size":11},
+					{"name":"IControl","size":11},
+					{"name":"PanZoomControl","size":11},
+					{"name":"SelectionControl","size":11},
+					{"name":"TooltipControl","size":11}
+				]
+			},
+			{
+				"name":"住",
+				"children":[
+					{"name":"Data","size":11},
+					{"name":"DataList","size":1001},
+					{"name":"DataSprite","size":11},
+					{"name":"EdgeSprite","size":1001},
+					{"name":"NodeSprite","size":11},
+					{"name":"render",
+						"children":[
+							{"name":"ArrowType","size":1001},
+							{"name":"EdgeRenderer","size":11},
+							{"name":"IRenderer","size":1001},
+							{"name":"ShapeRenderer","size":1001}
+						]
+					},
+					{"name":"ScaleBinding","size":1001},
+					{"name":"Tree","size":	11},
+					{"name":"TreeBuilder","size":1930}
+				]
+			},
+			{"name":"行",
+				"children":[
+					{"name":"DataEvent","size":11},
+					{"name":"SelectionEvent","size":1880},
+					{"name":"TooltipEvent","size":1701},
+					{"name":"VisualizationEvent","size":1117}
+				]
+			},
+			{"name":"出去玩",
+				"children":[
+					{"name":"5/19 南趕羚羊館","size":11},
+					{"name":"5/5 大湖公園野餐","size":11},
+					{"name":"5/12 蹺班晶華貴婦下午茶","size":11}
+				]
+			},
+			{"name":"其他",
+				"children":[
+					{"name":"繳稅","size":18461},
+					{"name":"其他","size":61}
+				]
+			}
+		]
+	}
+]
+}

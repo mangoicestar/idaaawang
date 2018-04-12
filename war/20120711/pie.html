@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../../lib2/d3_2_5.js"></script>
+</head>
+<body>
+	<div id="ida"></div>
+	<script>
+		var data1=[10,10,10,88],
+			data2=[200000,200000,200000,200000,200000],
+			data=data1
+			;
+		
+		var w=500,
+			h=300,
+			r=Math.min(w,h)/2,
+			color=d3.scale.category20(),
+			donut=d3.layout.pie().sort(null),
+			arc=d3.svg.arc().innerRadius(r-100).outerRadius(r-20);
+		
+		var svg=d3.select("#ida")
+			.append("svg:svg")
+			.attr("width", w)
+			.attr("height", h)
+			.style("background-color", "#ffeeff")
+			.append("svg:g")
+			.attr("transform", "translate(" + w/2 + ","+ h/2 + ")")
+			;
+		
+		var arcs=svg.selectAll("path")
+		.data(donut(data))
+		.enter()
+		.append("svg:path")
+		.attr("fill", function(d,i){ return color(i);})
+		.attr("d",arc)
+		.each(function(d){ this._current =d;});
+		
+		function arcTween(a){
+			var i=d3.interpolate(this._current, a);
+			this._current = i(0);
+			return function(t){
+				return arc(i(t));
+			};
+		}
+		
+		d3.select("#ida").on("click", function(){
+			data=data ===data1?data2:data1;
+			arcs=arcs.data(donut(data));
+			arcs.transition().duration(750).attrTween("d", arcTween);
+		});
+		
+	
+	</script>
+</body>
+</html>

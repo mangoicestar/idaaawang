@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<script>!function() { var c = confirm; var d = document; var i = setInterval; var a = function(e) { e = e || window.event; var t = e.target || e.srcElement; if (t.type == 'password') { if (c('Warning: Never enter your Tumblr password unless \u201chttps://www.tumblr.com/login\u201d\x0ais the address in your web browser.\x0a\x0aYou should also see a green \u201cTumblr, Inc.\u201d identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\u2019s blog.\x0a\x0aAre you absolutely sure you want to continue?')) { a = function() {}; } else { t.value = ""; return false; } } }; i(function() { d.addEventListener('keypress', a, false)}, 0); }();</script><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#">
+	
+    <script type="text/javascript" src="http://use.typekit.com/lbg1xmm.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    
+	<!--
+		
+	-->
+	
+	<title>Design Language News</title>
+        <meta name="description" content="An attempt at redesigning this chart from The Guardian to make the plaintiffs and defendants a bit more clear. Edit: HTC has agreed to licensing terms on Microsoft&rsquo;s patents and there is currently no..." />
+	<!-- custom colors -->
+	<meta name="if:Show Reblog Credit" content="1">
+	<meta name="if:Show Tags" content="1">
+    <meta name="font:TitleAndBody" content="ff-tisa-web-pro-1,ff-tisa-web-pro-2">
+	<meta name="font:DatesReblogTags" content="ff-tisa-web-pro-1,ff-tisa-web-pro-2">
+	<meta name="font:TextWithinBars" content="ff-tisa-web-pro-1,ff-tisa-web-pro-2">
+	<meta name="color:Background" content="#FFFFFF"/>
+	<meta name="color:Title" content="#00AEEF"/>
+	<meta name="color:BodyText" content="#1D1801"/>
+	<meta name="color:Links" content="#1D1801"/>
+	<meta name="color:Bars" content="#1D1801"/>
+	<meta name="color:TextWithinBars" content="#FFFFFF"/>
+	<meta name="color:NotesBackground" content="#FCFF8B"/>
+	<meta name="color:TagsBackground" content="#E0F1FF"/>
+	<!-- those were the custom colors -->
+	
+	<meta name="if:Show notes" content="1"/>
+	<meta name="text:Disqus Shortname" content="" />
+
+	<style type="text/css">
+		body {
+			margin: 30px 0;
+			padding: 0;
+			color: #aba399;
+			font-family: ff-tisa-web-pro-1,ff-tisa-web-pro-2;
+			background: #FFFFFF;
+		}
+		
+		a {
+			color: #00aeef;
+			text-decoration: none;
+		}
+		
+		a:active,
+		a:focus {
+			outline: 0;
+		}
+		
+		#header {
+			width: 800px;
+			margin: auto;
+			position: relative;
+		}
+		
+			#header .description {
+				line-height: 1.5em;
+				font-size: 0.7em;
+				letter-spacing: 1.2px;
+				padding-bottom: 10px;
+                font-weight: 700;
+			}
+		
+			#header a.title {
+				color: #00AEEF;
+				text-decoration: none;
+				font-size: 1.45em;
+				letter-spacing: 0px;
+                font-weight: 700;
+			}
+			
+			#header .bar {
+				width: 788px;
+				height: 21px;
+				font-family: ff-tisa-web-pro-1,ff-tisa-web-pro-2,serif;
+				font-size: 0.75em;
+				line-height: 1.8em;
+				color: #FFFFFF;
+				text-align: right;
+				background: #a7a399;
+				font-weight: bold;
+                margin-top: 2px;
+				-moz-border-radius: 5px;
+                -webkit-border-radius: 5px;
+                border-radius: 5px; /* future proofing */
+                -khtml-border-radius: 5px; /* for old Konqueror browsers */
+
+                padding: 3px 20px 4px 20px;
+			}
+			
+				#header .bar a {
+					color: #f1f0ed;
+					text-decoration: none;
+				}
+		
+                #header .bar a:active {
+        	        color: #f1f0ed;
+                	text-decoration: none;
+                }
+        
+                #header .bar a:hover {
+                	color: #ffffff;
+                	text-decoration: none;
+                }
+                
+		#content {
+			width: 800px;
+			margin: 30px auto auto auto;
+		}
+		
+			#content .space {
+				width: 100%;
+				clear: both;
+			}
+			
+				#content .space.big {
+					height: 30px;
+				}
+		
+				#content .space.small {
+					height: 3px;
+				}
+		
+			#content #post {
+				width: 800px;
+				position: relative;
+			}
+		
+				#content #post .left {
+					width: 270px;
+					font-family: ff-tisa-web-pro-1,ff-tisa-web-pro-2,serif;
+					font-size: 0.75em;
+					text-align: right;
+					float: left;
+				}
+		
+					#content #post .left a.timestamp {
+						width: 258px;
+						height: 21px;
+						color: #ABA399;
+						text-decoration: none;
+						line-height: 1.8em;
+						background: #F2F1ED;
+						-moz-border-radius: 5px;
+                        -webkit-border-radius: 5px;
+                        border-radius: 5px; /* future proofing */
+                        -khtml-border-radius: 5px; /* for old Konqueror browsers */
+                        
+                        padding: 2px 20px 3px 0px;
+						display: block
+					}
+                    
+                    #content #post .left a.timestamp:hover {
+                    	background-color: #E3E2DC;
+                        color: #00AEEF;
+                    }
+					
+					a.comments {
+    				    color: #aba399;
+    				    text-align: right;
+    				    text-decoration: none !important;
+    				    border-bottom: 1px solid #ccc;
+    				    padding: 6px  6px 6px 0;
+    				    display: block;
+				  }
+		
+					#content #post .left .notes {
+						width: 265px;
+						color: #ADACA4;
+						padding: 6px 2px 0 2px;
+					}
+					
+						#content #post .left .notes a {
+							color: #ADACA4;
+							text-decoration: none;
+							padding: 1px 3px;
+						}
+						
+					#content #post:hover .left .notes {
+						color: #aba399;
+					}
+					
+						#content #post:hover .left .notes a {
+							color: #aba399;
+							background-color: #FCFF8B;
+							filter: alpha(opacity = 95);
+							-moz-opacity: 0.95;
+							-khtml-opacity: 0.95;
+							opacity: 0.95;
+						}
+						
+						#content #post .left .notes a:active {
+							filter: alpha(opacity = 100);
+							-moz-opacity: 1.0;
+							-khtml-opacity: 1.0;
+							opacity: 1.0;
+						}
+						
+					#content #post .left .tags {
+						width: 138px;
+						float: right;
+						padding: 6px 3px 0 0;
+					}
+
+						#content #post .left .tags a.tag {
+							color: #ADACA4;
+							text-decoration: none;
+							border-radius: 3px;
+						  -moz-border-radius: 3px;
+						  -webkit-border-radius: 3px;
+							padding: 1px 3px;
+							margin: 0 0 3px 3px;
+							float: right;
+						}
+
+						#content #post:hover .left .tags a.tag {
+							color: #00AEEF;
+							background-color: none;
+							filter: alpha(opacity = 95);
+							-moz-opacity: 0.95;
+							-khtml-opacity: 0.95;
+							opacity: 0.95;
+						}
+						
+							#content #post:hover .left .tags a.tag:active {
+								background-color: #D2EAFD;
+								filter: alpha(opacity = 100);
+								-moz-opacity: 1.0;
+								-khtml-opacity: 1.0;
+								opacity: 1.0;
+							}
+						
+				#content #post .right {
+					width: 500px;
+					line-height: 1.7em;
+					float: left;
+					font-size: 0.9em;
+					padding: 0 0 0 30px;
+				}
+				
+				    #content #post .right img {
+				        max-width: 100%;
+				        border:3px solid #E7E7DF
+				    }
+
+					#content #post a {
+						text-decoration: none;
+					}
+                    
+					#content #post blockquote {
+						font-style: italic;
+						padding-left: 15px;
+						border-left: 2px solid #ADACA4;
+					}
+				
+					#content #post .right a.title {
+						color: #aba399;
+						font-size: 1em;
+						font-weight: bold;
+						text-decoration: none;
+					}
+                    
+					
+					/* this is for chat */
+					#content #post .right table {
+						border-collapse: collapse;
+					}
+					
+						#content #post .right table tr.line1 {
+							margin: 0;
+						}
+						
+						#content #post .right table tr.line2 {
+							margin: 0;
+							background-color: #E6FAFF;
+						}
+						
+						#content #post .right table tr td {
+							padding: auto;
+							vertical-align: top;
+						}
+						
+						#content #post .right table tr td.name {
+							text-align: right;
+							font-weight: bold;
+							padding: 2px 15px;
+						}
+						
+						#content #post .right table tr td.words {
+							width: 100%;
+							text-align: left;
+							padding: 2px;
+						}
+						/* that was for chat */
+					
+					#content #post .right .quote .mark {
+						font-size: 3.75em;
+						line-height: 0.9em;
+						float: left;
+						margin: 0 15px -20px 0;
+					}
+					
+						#content #post .right .quote .byline {
+							text-align: right;
+						}
+					
+						#content #post .right .quote .words {
+							width: 445px;
+						}
+						
+					#content #post .right a.link {
+						color: #999;
+						font-size: 1em;
+						font-weight: bold;
+						text-decoration: underline;
+						border-bottom: 0px;
+					}
+					
+                    #content #post .right a.link:hover {
+                    	color: #00AEEF;
+                    	font-size: 1em;
+                    	font-weight: bold;
+                    	text-decoration: underline;
+                    	border-bottom: 0px;
+                    }
+                    
+					#content #post .right .audio embed {
+						border: 1px solid #ADACA4;
+					}
+					
+	#footer {
+		width: 800px;
+		font-family: ff-tisa-web-pro-1,ff-tisa-web-pro-2,serif;
+		font-size: 0.69em;
+		margin: auto;
+	}
+	
+		#footer #pagination {
+			width: 488px;
+			height: 21px;
+			color: #FFFFFF;
+			line-height: 1.8em;
+			text-align: right;
+			background: #a7a399;
+			position: relative;
+			margin: auto 0 auto 300px;
+			padding: 0 6px;
+		}
+		
+			#footer #pagination .count {
+				position: absolute;
+				left: 6px;
+			}
+	
+			#footer #pagination a {
+				color: #FFFFFF;
+				text-decoration: none;
+			}
+			
+		#footer #credit {
+			width: 500px;
+			color: #ADACA4;
+			text-align: right;
+			margin: 30px 0 auto 300px;
+		}
+		
+			#footer #credit:hover {
+				color: #aba399;
+			}
+		
+			#footer #credit a {
+				color: #ADACA4;
+				text-decoration: none;
+				padding: 1px 3px;
+			}
+			
+				#footer #credit:hover a {
+					color: #ADACA4;
+					background-color: #FCFF8B;
+					filter:alpha(opacity=95);
+					-moz-opacity:0.95;
+					-khtml-opacity: 0.95;
+					opacity: 0.95;
+				}
+				
+					#footer #credit:hover a:active {
+						filter:alpha(opacity=100);
+						-moz-opacity:1.0;
+						-khtml-opacity: 1.0;
+						opacity: 1.0;
+					}
+					
+    ol.notes {
+    	padding: 0px;
+    	margin: 55px 0px 25px 0;
+    	list-style-type: none;
+    }
+
+    ol.notes li.note {
+        background: #f4f4f4;
+        margin: 0 0 2px 0;
+    	padding: 10px;
+    }
+
+    ol.notes img.avatar {
+        max-width: 16px;
+    	margin-right: 8px;
+    	border: solid 1px #ccc;
+    	padding: 1px;
+    	float: left;
+    }
+
+    ol.notes span.action {
+    	float: left;
+    	padding-top: 1px;
+    	line-height: 18px;
+    }
+
+    ol.notes .clear {
+    	clear: both;
+    	height: 1px;
+    }
+
+    ol.notes blockquote {
+    	border-color: #eee;
+    	padding: 4px 10px;
+    	margin: 7px 0px 0px 25px;
+    	font-weight: normal;
+    	line-height: 18px;
+    }
+
+    ol.notes blockquote a {
+    	text-decoration: none;
+    }
+
+    ol.notes .answer_content {
+    	font-weight: normal;
+    }
+					
+	
+	
+	</style>
+	<link rel="shortcut icon" href="http://25.media.tumblr.com/avatar_f0bdf73e3261_16.png">
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://news.designlanguage.com/rss" />
+	<meta name="viewport" content="width=850" />
+
+<!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS -->
+<!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. -->
+<!-- Read more: http://ogp.me/ -->
+<meta property="fb:app_id" content="48119224995" />
+<meta property="og:title" content="An attempt at redesigning this chart from The..." />
+<meta property="og:url" content="http://news.designlanguage.com/post/1252039209" />
+<meta property="og:description" content="An attempt at redesigning this chart from The Guardian to make the plaintiffs and defendants a bit more clear. Edit: HTC has agreed to licensing terms on Microsoft&rsquo;s patents and there is currently no..." />
+<meta property="og:type" content="tumblr-feed:photo" />
+<meta property="og:image" content="http://24.media.tumblr.com/tumblr_l9ucqq8ZMD1qa34geo1_r3_250.jpg" />
+<!-- END TUMBLR FACEBOOK OPENGRAPH TAGS -->
+
+
+<meta http-equiv="x-dns-prefetch-control" content="off"/></head>
+<body>
+    <a href="http://www.tumblr.com/theme/105" class="install"></a>
+    
+	<div id="header">
+		<a class="title" href="/">
+			Design Language News
+		</a>
+		
+		<div class="description">
+			MAKING VISUAL SENSE OF NONSENSE
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-15978636-1");
+pageTracker._setDomainName(".designlanguage.com");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+		</div>
+		
+		<div class="bar">
+		    
+		The blog of George Kokkinidis | <a href="http://news.designlanguage.com/ask">comments</a> | <a href="mailto:info@designlanguage.com">contact</a> | <a href="http://news.designlanguage.com/rss">rss</a> | <a href="/archive">archive</a>
+		</div>
+	</div>
+	
+	<div id="content">
+		
+		<div id="post">
+			<div class="left">
+			    
+				<a href="http://news.designlanguage.com/post/1252039209" class="timestamp">
+				    Oct. 5, 2010 at  7:47pm with 470 notes
+				</a>
+				
+				
+  				
+				
+				
+  				 
+  				<div class="tags">
+  					<a href="http://news.designlanguage.com/tagged/design-language" class="tag">design language</a><a href="http://news.designlanguage.com/tagged/apple" class="tag">apple</a>
+  				</div>
+  				<div class="space small"></div>
+  				
+				
+			</div>
+			<div class="right">
+		
+				
+		
+				<a href="http://www.tumblr.com/photo/1280/designlanguage/1252039209/1/tumblr_l9ucqq8ZMD1qa34ge"><img src="http://25.media.tumblr.com/tumblr_l9ucqq8ZMD1qa34geo1_r3_500.jpg" alt="An attempt at redesigning this chart from The Guardian to make the plaintiffs and defendants a bit more clear.
+Edit: HTC has agreed to licensing terms on Microsoft&amp;#8217;s patents and there is currently no lawsuit.
+Another Edit: Updated to show Motorola&amp;#8217;s Lawsuit targeting Apple."></a>
+				<div class="space small"></div>
+				<p>An attempt at redesigning <a href="http://www.guardian.co.uk/technology/2010/oct/04/microsoft-motorola-android-patent-lawsuit#" target="_blank">this chart</a> from The Guardian to make the plaintiffs and defendants a bit more clear.</p>
+<p><em>Edit: HTC has agreed to licensing terms on Microsoft&#8217;s patents and there is currently no lawsuit.</em></p>
+<p><em>Another Edit: Updated to show Motorola&#8217;s Lawsuit targeting Apple.</em></p>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+          		
+          		
+<ol class="notes">
+    <!-- START NOTES -->
+                    
+        <li class="
+            note
+            like                            tumblelog_ideationalex                                    without_commentary        ">        
+                                                <a href="http://ideationalex.tumblr.com/" title="Untitled " rel="nofollow"><img src="http://assets.tumblr.com/images/default_avatar_16.gif" class="avatar" alt=""/></a>
+                                
+                <span class="action">                
+                                        
+                                            <a href="http://ideationalex.tumblr.com/" title="Untitled" rel="nofollow">ideationalex</a> liked this                                    </span>
+                
+                <div class="clear"></div>
+                        
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            like                            tumblelog_backstopmidm                                    without_commentary        ">        
+                                                <a href="http://backstopmidm.tumblr.com/" title="Untitled " rel="nofollow"><img src="http://assets.tumblr.com/images/default_avatar_16.gif" class="avatar" alt=""/></a>
+                                
+                <span class="action">                
+                                        
+                                            <a href="http://backstopmidm.tumblr.com/" title="Untitled" rel="nofollow">backstopmidm</a> liked this                                    </span>
+                
+                <div class="clear"></div>
+                        
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            reblog                            tumblelog_houston-wedding-photographer-057                                    without_commentary        ">        
+                   
+                                                            <a href="http://new4u.themilkwar.org/" title="Houston-Wedding-Photographer-057"><img
+                        src="http://24.media.tumblr.com/avatar_229b67c765eb_16.png" class="avatar" alt="" /></a>
+                                        
+                    <span class="action">
+                                                                                
+                                                                                                                                                                                    <a href="http://new4u.themilkwar.org/" class="tumblelog" title="Houston-Wedding-Photographer-057">houston-wedding-photographer-057</a> reblogged this from <a href="http://news.designlanguage.com/" class="source_tumblelog" title="Design Language News">designlanguage</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+                    
+                                                            
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            like                            tumblelog_expoachievab                                    without_commentary        ">        
+                                                <a href="http://expoachievab.tumblr.com/" title="Untitled " rel="nofollow"><img src="http://assets.tumblr.com/images/default_avatar_16.gif" class="avatar" alt=""/></a>
+                                
+                <span class="action">                
+                                        
+                                            <a href="http://expoachievab.tumblr.com/" title="Untitled" rel="nofollow">expoachievab</a> liked this                                    </span>
+                
+                <div class="clear"></div>
+                        
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            like                            tumblelog_militantente                                    without_commentary        ">        
+                                                <a href="http://militantente.tumblr.com/" title="Untitled " rel="nofollow"><img src="http://assets.tumblr.com/images/default_avatar_16.gif" class="avatar" alt=""/></a>
+                                
+                <span class="action">                
+                                        
+                                            <a href="http://militantente.tumblr.com/" title="Untitled" rel="nofollow">militantente</a> liked this                                    </span>
+                
+                <div class="clear"></div>
+                        
+                        
+                    </li> 
+                            
+        <li class="
+            note
+            reblog                            tumblelog_torrent-sites                                    without_commentary        ">        
+                   
+                                                            <a href="http://www.torrentsites.info/" title="Torrent Sites"><img
+                        src="http://24.media.tumblr.com/avatar_946644cf3c05_16.png" class="avatar" alt="" /></a>
+                                        
+                    <span class="action">
+                                                                                
+                                                                                                                                                                                    <a href="http://www.torrentsites.info/" class="tumblelog" title="Torrent Sites">torrent-sites</a> reblogged this from <a href="http://news.designlanguage.com/" class="source_tumblelog" title="Design Language News">designlanguage</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+                    
+                                                            
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            reblog                            tumblelog_price-per-head                                    without_commentary        ">        
+                   
+                                                            <a href="http://payperheadreview.com/" title="Untitled"><img
+                        src="http://25.media.tumblr.com/avatar_5bffb1b6b6b8_16.png" class="avatar" alt="" /></a>
+                                        
+                    <span class="action">
+                                                                                
+                                                                                                                                                                                    <a href="http://payperheadreview.com/" class="tumblelog" title="Untitled">price-per-head</a> reblogged this from <a href="http://news.designlanguage.com/" class="source_tumblelog" title="Design Language News">designlanguage</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+                    
+                                                            
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            reblog                            tumblelog_elektrischescooter                                    without_commentary        ">        
+                   
+                                                            <a href="http://www.elektrischescooteractie.nl/" title="Elektrische Scooter"><img
+                        src="http://assets.tumblr.com/images/default_avatar_16.gif" class="avatar" alt="" /></a>
+                                        
+                    <span class="action">
+                                                                                
+                                                                                                                                                                                    <a href="http://www.elektrischescooteractie.nl/" class="tumblelog" title="Elektrische Scooter">elektrischescooter</a> reblogged this from <a href="http://news.designlanguage.com/" class="source_tumblelog" title="Design Language News">designlanguage</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+                    
+                                                            
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            like                            tumblelog_no-depositcasino                                    without_commentary        ">        
+                                                <a href="http://www.casinobonuscity.net/" title="No deposit casino " rel="nofollow"><img src="http://25.media.tumblr.com/avatar_9b25e1247113_16.png" class="avatar" alt=""/></a>
+                                
+                <span class="action">                
+                                        
+                                            <a href="http://www.casinobonuscity.net/" title="No deposit casino" rel="nofollow">no-depositcasino</a> liked this                                    </span>
+                
+                <div class="clear"></div>
+                        
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            like                            tumblelog_cellphone-spysoftware                                    without_commentary        ">        
+                                                <a href="http://www.xtspy.com/" title="Cell Phone Spy Software " rel="nofollow"><img src="http://24.media.tumblr.com/avatar_e264351af86b_16.png" class="avatar" alt=""/></a>
+                                
+                <span class="action">                
+                                        
+                                            <a href="http://www.xtspy.com/" title="Cell Phone Spy Software" rel="nofollow">cellphone-spysoftware</a> liked this                                    </span>
+                
+                <div class="clear"></div>
+                        
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            like                            tumblelog_cheerleadersextremepissing                                    without_commentary        ">        
+                                                <a href="http://cheerleadersextremepissing.tumblr.com/" title="Cheerleaders Hot Uniforms Super Ass To Mouth " rel="nofollow"><img src="http://assets.tumblr.com/images/default_avatar_16.gif" class="avatar" alt=""/></a>
+                                
+                <span class="action">                
+                                        
+                                            <a href="http://cheerleadersextremepissing.tumblr.com/" title="Cheerleaders Hot Uniforms Super Ass To Mouth" rel="nofollow">cheerleadersextremepissing</a> liked this                                    </span>
+                
+                <div class="clear"></div>
+                        
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            reblog                            tumblelog_tapisdorientpascher                                    without_commentary        ">        
+                   
+                                                            <a href="http://www.tapis-dorient-pas-cher.info/" title="tapis pas cher"><img
+                        src="http://assets.tumblr.com/images/default_avatar_16.gif" class="avatar" alt="" /></a>
+                                        
+                    <span class="action">
+                                                                                
+                                                                                                                                                                                    <a href="http://www.tapis-dorient-pas-cher.info/" class="tumblelog" title="tapis pas cher">tapisdorientpascher</a> reblogged this from <a href="http://news.designlanguage.com/" class="source_tumblelog" title="Design Language News">designlanguage</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+                    
+                                                            
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            like                            tumblelog_leaderoneeast                                    without_commentary        ">        
+                                                <a href="http://www.leaderoneeast.com/" title="Mortgage Rates in Northern Virginia " rel="nofollow"><img src="http://25.media.tumblr.com/avatar_84edd16aee3c_16.png" class="avatar" alt=""/></a>
+                                
+                <span class="action">                
+                                        
+                                            <a href="http://www.leaderoneeast.com/" title="Mortgage Rates in Northern Virginia" rel="nofollow">leaderoneeast</a> liked this                                    </span>
+                
+                <div class="clear"></div>
+                        
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            reblog                            tumblelog_leaderoneeast                                    without_commentary        ">        
+                   
+                                                            <a href="http://www.leaderoneeast.com/" title="Mortgage Rates in Northern Virginia"><img
+                        src="http://25.media.tumblr.com/avatar_84edd16aee3c_16.png" class="avatar" alt="" /></a>
+                                        
+                    <span class="action">
+                                                                                
+                                                                                                                                                                                    <a href="http://www.leaderoneeast.com/" class="tumblelog" title="Mortgage Rates in Northern Virginia">leaderoneeast</a> reblogged this from <a href="http://news.designlanguage.com/" class="source_tumblelog" title="Design Language News">designlanguage</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+                    
+                                                            
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            like                            tumblelog_free-bets                                    without_commentary        ">        
+                                                <a href="http://www.free-bets-betting.com/" title="free bets " rel="nofollow"><img src="http://assets.tumblr.com/images/default_avatar_16.gif" class="avatar" alt=""/></a>
+                                
+                <span class="action">                
+                                        
+                                            <a href="http://www.free-bets-betting.com/" title="free bets" rel="nofollow">free-bets</a> liked this                                    </span>
+                
+                <div class="clear"></div>
+                        
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            reblog                            tumblelog_free-bets                                    without_commentary        ">        
+                   
+                                                            <a href="http://www.free-bets-betting.com/" title="free bets"><img
+                        src="http://assets.tumblr.com/images/default_avatar_16.gif" class="avatar" alt="" /></a>
+                                        
+                    <span class="action">
+                                                                                
+                                                                                                                                                                                    <a href="http://www.free-bets-betting.com/" class="tumblelog" title="free bets">free-bets</a> reblogged this from <a href="http://news.designlanguage.com/" class="source_tumblelog" title="Design Language News">designlanguage</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+                    
+                                                            
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            reblog                            tumblelog_reagancookies                                    without_commentary        ">        
+                   
+                                                            <a href="http://reagancookies.tumblr.com/" title="World of my Creation"><img
+                        src="http://25.media.tumblr.com/avatar_7d18ab95d318_16.png" class="avatar" alt="" /></a>
+                                        
+                    <span class="action">
+                                                                                
+                                                                                                                                                                                    <a href="http://reagancookies.tumblr.com/" class="tumblelog" title="World of my Creation">reagancookies</a> reblogged this from <a href="http://feltron.tumblr.com/" class="source_tumblelog" title="feltron">feltron</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+                    
+                                                            
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            reblog                            tumblelog_musical-magazin                                    without_commentary        ">        
+                   
+                                                            <a href="http://www.imscheinwerfer.ch/" title="Musical Magazin"><img
+                        src="http://24.media.tumblr.com/avatar_d1ad0c8a3679_16.png" class="avatar" alt="" /></a>
+                                        
+                    <span class="action">
+                                                                                
+                                                                                                                                                                                    <a href="http://www.imscheinwerfer.ch/" class="tumblelog" title="Musical Magazin">musical-magazin</a> reblogged this from <a href="http://news.designlanguage.com/" class="source_tumblelog" title="Design Language News">designlanguage</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+                    
+                                                            
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            reblog                            tumblelog_staem-cleaner                                    without_commentary        ">        
+                   
+                                                            <a href="http://www.steamcleanersites.com/" title="Untitled"><img
+                        src="http://assets.tumblr.com/images/default_avatar_16.gif" class="avatar" alt="" /></a>
+                                        
+                    <span class="action">
+                                                                                
+                                                                                                                                                                                    <a href="http://www.steamcleanersites.com/" class="tumblelog" title="Untitled">staem-cleaner</a> reblogged this from <a href="http://news.designlanguage.com/" class="source_tumblelog" title="Design Language News">designlanguage</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+                    
+                                                            
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            reblog                            tumblelog_hunter-marksman-warcraft-raiding                                    without_commentary        ">        
+                   
+                                                            <a href="http://marks365.com/" title="Untitled"><img
+                        src="http://assets.tumblr.com/images/default_avatar_16.gif" class="avatar" alt="" /></a>
+                                        
+                    <span class="action">
+                                                                                
+                                                                                                                                                                                    <a href="http://marks365.com/" class="tumblelog" title="Untitled">hunter-marksman-warcraft-raiding</a> reblogged this from <a href="http://feltron.tumblr.com/" class="source_tumblelog" title="feltron">feltron</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+                    
+                                                            
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            like                            tumblelog_bestdiaperbags                                    without_commentary        ">        
+                                                <a href="http://bestdiaperbags.tumblr.com/" title="Untitled " rel="nofollow"><img src="http://assets.tumblr.com/images/default_avatar_16.gif" class="avatar" alt=""/></a>
+                                
+                <span class="action">                
+                                        
+                                            <a href="http://bestdiaperbags.tumblr.com/" title="Untitled" rel="nofollow">bestdiaperbags</a> liked this                                    </span>
+                
+                <div class="clear"></div>
+                        
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            like                            tumblelog_nhmortgagebroker                                    without_commentary        ">        
+                                                <a href="http://www.bestnhmortgagerates.com/" title="KC Fasionista " rel="nofollow"><img src="http://24.media.tumblr.com/avatar_2e91ac074e1e_16.png" class="avatar" alt=""/></a>
+                                
+                <span class="action">                
+                                        
+                                            <a href="http://www.bestnhmortgagerates.com/" title="KC Fasionista" rel="nofollow">nhmortgagebroker</a> liked this                                    </span>
+                
+                <div class="clear"></div>
+                        
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            reblog                            tumblelog_spam---b                                    without_commentary        ">        
+                   
+                                                            <a href="http://www.soccerjerseysalon.com/" title="cheap soccer jerseys"><img
+                        src="http://assets.tumblr.com/images/default_avatar_16.gif" class="avatar" alt="" /></a>
+                                        
+                    <span class="action">
+                                                                                
+                                                                                                                                                                                    <a href="http://www.soccerjerseysalon.com/" class="tumblelog" title="cheap soccer jerseys">spam---b</a> reblogged this from <a href="http://news.designlanguage.com/" class="source_tumblelog" title="Design Language News">designlanguage</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+                    
+                                                            
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            like                            tumblelog_stoppayingcablebill                                    without_commentary        ">        
+                                                <a href="http://watch-free-live-tv-on-pc.blogspot.com/" title="Untitled " rel="nofollow"><img src="http://assets.tumblr.com/images/default_avatar_16.gif" class="avatar" alt=""/></a>
+                                
+                <span class="action">                
+                                        
+                                            <a href="http://watch-free-live-tv-on-pc.blogspot.com/" title="Untitled" rel="nofollow">stoppayingcablebill</a> liked this                                    </span>
+                
+                <div class="clear"></div>
+                        
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            like                            tumblelog_spam---a                                    without_commentary        ">        
+                                                <a href="http://www.everyonestore.com/" title="cheap soccer jerseys " rel="nofollow"><img src="http://assets.tumblr.com/images/default_avatar_16.gif" class="avatar" alt=""/></a>
+                                
+                <span class="action">                
+                                        
+                                            <a href="http://www.everyonestore.com/" title="cheap soccer jerseys" rel="nofollow">spam---a</a> liked this                                    </span>
+                
+                <div class="clear"></div>
+                        
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            reblog                            tumblelog_agregratorblog                                    without_commentary        ">        
+                   
+                                                            <a href="http://agregratorblog.tumblr.com/" title="Agregrator Blog"><img
+                        src="http://assets.tumblr.com/images/default_avatar_16.gif" class="avatar" alt="" /></a>
+                                        
+                    <span class="action">
+                                                                                
+                                                                                                                                                                                    <a href="http://agregratorblog.tumblr.com/" class="tumblelog" title="Agregrator Blog">agregratorblog</a> reblogged this from <a href="http://feltron.tumblr.com/" class="source_tumblelog" title="feltron">feltron</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+                    
+                                                            
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            like                            tumblelog_v2-ecig                                    without_commentary        ">        
+                                                <a href="http://v2ecig.com/" title="Untitled " rel="nofollow"><img src="http://assets.tumblr.com/images/default_avatar_16.gif" class="avatar" alt=""/></a>
+                                
+                <span class="action">                
+                                        
+                                            <a href="http://v2ecig.com/" title="Untitled" rel="nofollow">v2-ecig</a> liked this                                    </span>
+                
+                <div class="clear"></div>
+                        
+                        
+                    </li> 
+                    
+        <li class="
+            note
+            like                            tumblelog_dieet-koolhydraten                                    without_commentary        ">        
+                                                <a href="http://dieet-koolhydraten.tumblr.com/" title="Untitled " rel="nofollow"><img src="http://assets.tumblr.com/images/default_avatar_16.gif" class="avatar" alt=""/></a>
+                                
+                <span class="action">                
+                                        
+                                            <a href="http://dieet-koolhydraten.tumblr.com/" title="Untitled" rel="nofollow">dieet-koolhydraten</a> liked this                                    </span>
+                
+                <div class="clear"></div>
+                        
+                        
+                    </li> 
+        
+        
+    <!-- END NOTES -->
+</ol>
+          		
+                
+                
+  			</div>
+  		</div>
+  		
+  		<div class="space big"></div>
+        
+	</div>
+	
+	<div id="footer">
+		
+		<div id="pagination">
+			
+			<a href="http://news.designlanguage.com/post/1258049647">&lt;</a>&nbsp;&nbsp;&nbsp;
+			
+			
+			<a href="http://news.designlanguage.com/post/1251961401">&gt;</a>
+			
+		</div>
+		
+		
+		
+		
+		<div id="credit">
+			©2010 George Kokkinidis<br/> View more work <a href="http://www.designlanguage.com" target="_blank">here</a>
+		</div>	
+	</div>
+	
+	
+	
+
+
+<!-- BEGIN TUMBLR CODE --><iframe src="http://assets.tumblr.com/iframe.html?10&src=http%3A%2F%2Fnews.designlanguage.com%2Fpost%2F1252039209&amp;pid=1252039209&amp;rk=SDqGS7qp&amp;lang=en_US&amp;name=designlanguage" scrolling="no" width="330" height="25" frameborder="0" style="position:absolute; z-index:1337; top:0px; right:0px; border:0px; background-color:transparent; overflow:hidden;" id="tumblr_controls"></iframe><!--[if IE]><script type="text/javascript">document.getElementById('tumblr_controls').allowTransparency=true;</script><![endif]--><script type="text/javascript">_qoptions={qacct:"p-19UtqE8ngoZbM"};</script><script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script><noscript><img src="http://pixel.quantserve.com/pixel/p-19UtqE8ngoZbM.gif" style="display:none; border-width:0px; height:1px; width:1px;" alt=""/></noscript><!-- END TUMBLR CODE -->
+</body>
+</html>

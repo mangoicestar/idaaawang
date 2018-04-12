@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=BIG5">
+<script src="../../lib2/d3.js"></script>
+<script>
+var data = [32, 57, 112, 250],		// 定義頁面上的物件個數與位置大小等相關設定
+dataEnter = data.concat(293),		// merge 2 arrays = data + dataEnter 
+dataExit = data.slice(0, 2),		// 
+w = 500,								// 總畫布的寬度 (x軸)
+h = 180,								// 總畫布的長度 (y軸)
+x = d3.scale.ordinal().domain([57, 32, 112, 250]).rangePoints([0, w], 1),
+y = d3.scale.ordinal().domain(data).rangePoints([0, h], 2);
+
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+	<hr><p> case 1.) </p>
+	<div id="viz"></div>
+	<script language="javascript" type="text/javascript">
+	   var sampleSVG = d3.select("#viz")
+	       .append("svg:svg")
+	       .attr("width", 100)		// 畫布的尺寸 (寬)
+	       .attr("height", 100);		// 畫布的尺寸 (高)
+
+
+		   sampleSVG.append("svg:circle")
+	       .style("stroke", "pink")			// 框框
+	       .style("stroke-width", 5)
+	       .style("fill", "white")				// 預設填滿色彩
+	       .attr("r", 25)							// 半徑長度
+	       .attr("cx", 50)						// 物件在畫布中 X軸起點位置
+	       .attr("cy", 50)						// 物件在畫布中 Y軸起點位置
+		   .on("mouseover", function(){
+			   d3.select(this).style("fill", "pink");})
+		   .on("mouseout", function(){
+			   d3.select(this).style("fill", "white");});
+	</script>
+	
+	
+	<hr>
+	<p> case 2.) </p>
+	<div class='chart' id='chart-2'>
+		<button>kerker ---</button>
+	</div>
+	<script type='text/javascript'>
+	
+		(function() {
+			var svg = d3.select("#chart-2").append("svg:svg")
+				.attr("width", w)
+				.attr("height", h);
+			
+			svg.selectAll("circle")
+				.data(data)
+				.enter().append("svg:circle")
+				.attr("class", "little")
+				.attr("cx", x)
+				.attr("cy", y)
+				.attr("r", 12);
+			
+			d3.select("#chart-2 button").on("click", function() {
+				alert("kerker");
+				svg.selectAll("circle.select").remove();
+				svg.selectAll("circle.select")
+					.data(data)
+					.enter().append("svg:circle")
+					.attr("class", "select")
+					.attr("cx", x)
+					.attr("cy", y)
+					.attr("r", 60)
+					.style("fill", "none")
+					.style("stroke", "red")
+					.style("stroke-opacity", 1e-6)
+					.style("stroke-width", 3)
+					.transition()
+					.duration(2000)		// 圖形轉換的時間 (1/1000sec)
+					.attr("r", 7)			// 圈圈跑到最後的直徑大小
+					.style("stroke-opacity", 1);
+				});
+		})();
+	</script>
+
+
+
+	<hr><p> case 3.) </p>
+	<div class='chart' id='chart-3'>
+		<button>Run</button>
+	</div>
+	<script type='text/javascript'>
+
+	(function c3() {
+		var svg = d3.select("#chart-3").append("svg:svg")
+			.attr("width", w)
+			.attr("height", h);
+
+	  
+		var circle = svg.selectAll("circle")
+			.data(data)
+	    	.enter().append("svg:circle")
+			.attr("class", "little")
+			.attr("cx", x)
+			.attr("cy", y)
+			.attr("r", 9);
+	
+		d3.select("#chart-3 button").on("click", function() {
+			circle.style("fill", "#aaa").attr("r", 12).attr("cy", y);
+			circle.transition().duration(300).delay(300).style("fill", "steelblue");
+			circle.transition().duration(300).delay(600).attr("cy", 90);
+			circle.transition().duration(300).delay(900).attr("r", 25);
+//			circle.append("svg:text", "text");
+
+		});
+		
+	})();
+</script>
+
+	
+	
+	<hr><p> case 5.) </p>
+	<div class='chart' id='chart-9'>
+		<button>run</button>
+	</div>
+	<script type='text/javascript'>
+		(function() {
+		  var svg = d3.select("#chart-9").append("svg:svg")
+		      .attr("width", w)
+		      .attr("height", h);
+		
+		  var g = svg.selectAll("g.data")
+		      .data(dataEnter)
+		      .enter().append("svg:g")
+		      .attr("class", "data")
+		      .attr("transform", function(d, i) { return "translate(" + 20 * (i + 1) + ",20)"; });
+		
+		  g.append("svg:circle")
+		      .attr("class", "little")
+		      .attr("r", 1e-6)		// 1e-6 = parseInt(0.000001)
+		      .style("fill", "none")
+		      .style("stroke","deeppink")
+		      .style("stroke-width", 2);
+		
+		  g.append("svg:rect")
+		      .attr("x", -10)
+		      .attr("y", -10)
+		      .attr("width", 20)
+		      .attr("height", 20)
+		      .style("fill", "lightgreen")
+		      .style("stroke", "green");
+		
+		  g.append("svg:text")
+		      .attr("dy", ".35em")
+		      .attr("text-anchor", "middle")
+		      .text(String);
+		
+		  d3.select("#chart-9 button").on("click", function() {
+			alert("chart-9 : w = " + w + ", h = " + h + ", data[] = " + data + ", 1e-6 = " + (1e-6));
+		    g.attr("transform", function(d, i) { return "translate(" + 20 * (i + 1) + ",20)"; });
+		    g.select("rect").style("opacity", 1);
+		    g.select("circle").attr("r", 1e-6);
+		
+		   var t = g.transition().duration(750);
+		    t.attr("transform", function(d, i) { return "translate(" + d + ",90)"; });
+		    t.select("circle").attr("r", Math.sqrt);
+		    t.select("rect").style("opacity", 1e-6);
+		  });
+		})();
+	</script>
+	
+	
+
+
+</body>
+</html>

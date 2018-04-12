@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../../lib2/d3.js"></script>
+</head>
+<body>
+
+<div id="chart">
+	<button>run</button>
+</div>
+<br>
+<script>
+
+
+	//var data = [32, 57, 112, 250],		// 定義頁面上的物件個數與位置大小等相關設定
+	var data = [32],		// 定義頁面上的物件個數與位置大小等相關設定
+	w = 500,								// 總畫布的寬度 (x軸)
+	h = 200,								// 總畫布的長度 (y軸)
+	x = d3.scale.ordinal().domain([57, 32, 112, 250]).rangePoints([0, w], 1),
+	y = d3.scale.ordinal().domain(data).rangePoints([0, h], 2)
+		;
+	
+	var svg = d3.select("#chart").append("svg:svg")
+	.attr("width", w)
+	.attr("height", h)
+	.style("background-color","pink");
+
+	var circle = svg.selectAll("circle")
+		.data(data)
+ 		.enter().append("svg:circle")
+		.attr("class", "little")
+		.attr("cx", x)
+		.attr("cy", y)
+		.attr("r", 9);
+
+	d3.select("#chart button").on("click", function() {
+		alert("ha");
+		circle.style("fill", "#aaa").attr("r", 12).attr("cy", y);
+		circle.transition().duration(300).delay(300).style("fill", "steelblue");
+		circle.transition().duration(300).delay(600).attr("cy", 90);
+		circle.transition().duration(300).delay(900).attr("r", 25);
+	});
+
+</script>
+</body>
+</html>

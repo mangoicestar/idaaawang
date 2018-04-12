@@ -1,0 +1,25 @@
+@import url("../../lib/jquery-ui/jquery-ui.css");
+
+.ui-widget {
+  font: 15px Helvetica Neue;
+  padding-top: 0px;
+  padding-bottom: 3px;
+  width: 85%;
+}
+
+svg {
+	width: 60%;
+	height: 450px;
+	border: solid 1px #ccc;
+	background: #eee;
+	margin-left: 15%;
+}
+
+path {
+  fill: #778899;
+  stroke: #fff;
+}
+
+div {
+  width: 70%;
+}

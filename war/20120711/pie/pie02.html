@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pie Chart</title>
+<script src="../../lib2/d3_2_5.js"></script>
+</head>
+<body>
+	<div id="ida"></div>
+	<script type="text/javascript">
+
+		// 定義我的資料來源
+		var 
+			data1 = [10, 20, 50, 20, 40],
+			data2 = [200, 200, 200, 200, 200],
+			data = data1;
+		
+		// 先定義畫布跟派的位置與外觀
+		var w = 500,						// 畫布的寬
+		    h = 300,						// 畫布的高
+		    r = Math.min(w, h) / 2,	// 派的半徑
+		    
+			 // 派的外觀：各區塊的顏色與layout, 定義在 d3 的 source 裡, 有興趣的自己看哈~~
+		    color = d3.scale.category20(),			
+		    donut = d3.layout.pie().sort(null),	 
+		    arc = d3.svg.arc().innerRadius(r - 100).outerRadius(r - 20);
+		
+		// 畫布的屬性
+		var svg = d3.select("#ida")
+			.append("svg:svg")
+		    .attr("width", w)
+		    .attr("height", h)
+		    .style("background-color","#ffeeff")		// 底色
+　			.append("svg:g")
+		    .attr("transform", "translate(" + w / 2 + "," + h / 2 + ")")
+		    ;
+		
+		// 派裡各區塊的屬性
+		var arcs = svg.selectAll("path")
+		    .data(donut(data))
+			.enter().append("svg:path")
+		    .attr("fill", function(d, i) { return color(i); })		// 各區塊的顏色
+		    .attr("d", arc)
+		    .each(function(d) { this._current = d; });
+		
+		// 如果我要讓它變換另一組數字
+		d3.select("#ida").on("click", function() {
+		  data = data === data1 ? data2 : data1; // swap the data
+		  arcs = arcs.data(donut(data)); // recompute the angles and rebind the data
+		  arcs.transition().duration(750).attrTween("d", arcTween); // redraw the arcs
+		});
+		
+		// Store the currently-displayed angles in this._current.
+		// Then, interpolate from this._current to the new angles.
+		function arcTween(a) {
+		  var i = d3.interpolate(this._current, a);
+		  this._current = i(0);
+		  return function(t) {
+		    return arc(i(t));
+		  };
+		}
+
+    </script>
+</body>
+</html>

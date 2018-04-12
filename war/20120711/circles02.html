@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../../lib2/d3_2_5.js"></script>
+</head>
+<body>
+	<div id="ida"></div>
+
+	<script>
+		var simpleSVG=
+			d3.select("#ida")
+			.append("svg:svg")
+			.attr("width", 100)
+			.attr("height",100)
+			.style("background-color","gray");
+		
+		simpleSVG
+			.append("svg:circle")
+			.style("stroke","red")
+			.style("stroke-width","3")
+			.style("fill","white")
+			.attr("cx","50")
+			.attr("cy","50")
+			.attr("r","20")
+			
+			.on("mouseover",function(){
+				d3.select(this).style("fill","yellow");
+			})
+	
+		.on("mouseout",function(){
+			d3.select(this).style("fill","white");
+		})
+		
+		.on("click",function(){
+			d3.select(this)
+			.transition()
+			.duration(2000)
+			.attr("cx","30")
+			.attr("cy","30")
+			.attr("r","10")
+		})
+		;
+		
+		
+		
+			
+	</script>
+
+</body>
+</html>

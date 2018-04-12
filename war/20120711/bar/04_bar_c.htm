@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<script src="../../lib2/d3_2_5.js"></script>					
+		<!-- 1. 先指定 library 的位置 -->
+	</head>
+	<body>
+		<div class="chart" id="chart"></div>
+		<!-- 2. 給它一個 div -->
+		<script>
+	
+			var data = [2, 16, 28, 25, 29,10];				// 3. 定義我的資料來源
+			var chart = d3.select("#chart");				// 4. select 我的 div
+			
+			// 5. 先把大框框 (畫布) 畫出來, 全部指定 style , 寬度 + 框框 + 框框的style + 框框的顏色
+			chart.style("width", 300)							// 寬度
+				.style("text-align","right")
+				.style("border", "3px")							// 框框
+				.style("border-style", "solid")				// 框框的style
+				.style("border-color", "pink");				// 框框的顏色
+
+			// 6. 開始畫長條圖。 拿出 array + enter() + append("div") + 指定文字.text 並 return + 長條圖的寬度.style 的 width 並 return + 長條圖的顏色 + 長條圖的文字顏色 + 長條圖不要黏在一起
+			chart.selectAll("div")
+				.data(data)											// 先把 data 那個 arrya  拿進來
+				.enter()												// 每個 data 內每個 item  以 enter 作區隔, 從這裡開始以下就是針對每個 item 作處理
+				.append("div")										// 將每個 item append 為 div
+				.text(function(item) { 							// 各自 item 除了在畫 div 以外,還想讓上頭顯示自己的內容,利用 text func 來回傳自己的 item 
+					return item; 
+				})
+				
+				.style("width", function(item) {			// 各自 item 有自己的 div, 用 div 來畫自己的長條圖
+					return item * 10 + "px"; 					// return 每個 div 的長度
+				})
+				
+				.style("background-color", "steelblue")	// 長條圖的顏色
+				.style("color", "white")							// 長條圖的文字顏色
+				.style("margin", "1.5px");						// 長條圖不要黏在一起
+		
+		</script>
+	</body>
+</html>

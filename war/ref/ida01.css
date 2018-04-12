@@ -1,0 +1,71 @@
+body{
+/* 	background-image: url("../../ref/In_love_iMarkakis.png");		 */
+	background-color: #f5f5f5;
+	color: #778899;
+	margin: 0 auto;
+	font-family: Arial;
+}
+
+#div1{
+/* 	height: 30%;		 */
+	width: 100%;
+	margin: 0 auto;
+	margin-top : 5%;
+	margin-left: 20%;
+}
+
+#div2{
+	margin: 0 auto;
+	padding-top: -12%;
+}
+
+#div3{
+	width: 60%;
+	margin: 0 auto;
+	margin-top: -10%;
+	margin-left: 10%;
+/* 	border: 1px solid #778899;		 */
+}
+
+#div4{
+	margin-left: 15%;
+	font-size: 25px;
+	margin-top: -1%;
+}
+
+#ie_no{
+	width: 50%;
+	margin-left: 25%;
+	margin-top : 15%;	
+}
+
+.aaa{
+	height: 100px;
+	width: 95%;
+	font-size: 120px;
+	font-family: Arial, "微軟正黑體", "simhei",serif;
+	margin: 0 auto;
+	margin-top: 18%;
+/* 	border:1px solid #778899;	 */
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/********************************************************************************************/
+
+.dont-work{
+	color: #778999;
+	float:left;
+	font-size : 150px;
+	font-family: "微軟正黑體", "simhei",serif;
+}
+
+
+
